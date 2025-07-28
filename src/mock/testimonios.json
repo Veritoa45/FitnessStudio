@@ -1,0 +1,47 @@
+[
+  {
+    "id": "01",
+    "nombre": "Lucas R.",
+    "mensaje": "Excelente ambiente y equipamiento de primera. Los entrenadores están siempre dispuestos a ayudarte a mejorar y alcanzar tus metas. ¡Totalmente recomendado!"
+  },
+  {
+    "id": "02",
+    "nombre": "Valeria G.",
+    "mensaje": "Me encanta la variedad de clases grupales que ofrecen. Siempre encuentro algo nuevo y desafiante. Además, el personal es súper amable."
+  },
+  {
+    "id": "03",
+    "nombre": "Martin P.",
+    "mensaje": "Las instalaciones están siempre limpias y bien mantenidas. Es un placer entrenar aquí. La energía positiva se siente desde que entras."
+  },
+  {
+    "id": "04",
+    "nombre": "Julieta M.",
+    "mensaje": "He probado varios gimnasios en la zona y este es sin duda el mejor. El equipo es moderno y los entrenadores realmente saben lo que hacen."
+  },
+  {
+    "id": "05",
+    "nombre": "Federico A.",
+    "mensaje": "Desde que comencé a entrenar aquí, he notado grandes cambios en mi cuerpo y en mi salud. Los entrenadores me han guiado en cada paso del camino."
+  },
+  {
+    "id": "06",
+    "nombre": "Natalia S.",
+    "mensaje": "Lo que más me gusta de este gimnasio es la comunidad que se ha formado. Todos se apoyan mutuamente y eso te motiva a seguir adelante."
+  },
+  {
+    "id": "07",
+    "nombre": "Ignacio L.",
+    "mensaje": "El horario es súper flexible, lo que me permite entrenar a cualquier hora del día. Además, siempre tienen eventos y actividades especiales."
+  },
+  {
+    "id": "08",
+    "nombre": "Ana T.",
+    "mensaje": "El gimnasio tiene todo lo que necesitas, desde pesas libres hasta máquinas de última generación. Nunca tengo que esperar para usar el equipo."
+  },
+  {
+    "id": "09",
+    "nombre": "Rodrigo V.",
+    "mensaje": "Me encanta el enfoque personalizado que ofrecen. Los entrenadores se preocupan por tus objetivos y te ayudan a lograrlos de manera efectiva."
+  }
+]
