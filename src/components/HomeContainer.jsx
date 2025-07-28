@@ -1,6 +1,8 @@
 import Entrena from "../assets/entrena.jpg";
 import ClasesContainer from "./ClasesContainer";
 import TestimonioContainer from "./TestimonioContainer";
+import GaleriaGrid from "./GaleriaGrid";
+import Contacto from "./Contacto";
 
 const HomeContainer = () => {
   return (
@@ -10,6 +12,8 @@ const HomeContainer = () => {
       <div className="container p-4 mx-auto">
         <ClasesContainer />
         <TestimonioContainer />
+        <GaleriaGrid />
+        <Contacto />
       </div>
     </>
   );

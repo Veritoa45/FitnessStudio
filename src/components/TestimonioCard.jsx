@@ -1,14 +1,10 @@
-import testimonios from "../mock/testimonios.json";
-
-const TestimonioCard = () => {
+const TestimonioCard = ({ testimonio }) => {
   return (
     <>
-      {testimonios.map((testimonio) => (
-        <div key={testimonio.id}>
-          <p className="text-justify text-sm mb-4">{testimonio.mensaje}</p>
-          <h4 className="text-center font-semibold">- {testimonio.nombre} -</h4>
-        </div>
-      ))}
+      <div className="w-[300px] p-4 border rounded-2xl text-white bg-gray-800">
+        <p className="text-justify mb-4 text-base">{testimonio.mensaje}</p>
+        <h4 className="text-center font-semibold">- {testimonio.nombre} -</h4>
+      </div>
     </>
   );
 };
