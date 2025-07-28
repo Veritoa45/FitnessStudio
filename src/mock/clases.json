@@ -1,0 +1,42 @@
+[
+  {
+    "id": "01",
+    "nombre": "Aerobics",
+    "imagen": "src/assets/aerobics.jpg"
+  },
+  {
+    "id": "02",
+    "nombre": "Boxeo",
+    "imagen": "src/assets/boxeo.jpg"
+  },
+  {
+    "id": "03",
+    "nombre": "Crossfit",
+    "imagen": "src/assets/crossfit.jpg"
+  },
+  {
+    "id": "04",
+    "nombre": "Funcional",
+    "imagen": "src/assets/funcional.jpg"
+  },
+  {
+    "id": "05",
+    "nombre": "GAP",
+    "imagen": "src/assets/gap.jpg"
+  },
+  {
+    "id": "06",
+    "nombre": "Pilates",
+    "imagen": "src/assets/pilates.jpg"
+  },
+  {
+    "id": "07",
+    "nombre": "Spinning",
+    "imagen": "src/assets/spinning.jpg"
+  },
+  {
+    "id": "08",
+    "nombre": "Streching",
+    "imagen": "src/assets/streching.jpg"
+  }
+]
