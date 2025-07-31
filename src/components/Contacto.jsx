@@ -11,7 +11,7 @@ const Contacto = () => {
         className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md space-y-8"
       >
         <div>
-          <label for="email" className="block mb-4 text-base text-gray-300">
+          <label htmlFor="email" className="block mb-4 text-base text-gray-300">
             Email
           </label>
           <input
@@ -23,7 +23,10 @@ const Contacto = () => {
           />
         </div>
         <div>
-          <label for="subject" className="block mb-4 text-base text-gray-300">
+          <label
+            htmlFor="subject"
+            className="block mb-4 text-base text-gray-300"
+          >
             Asunto
           </label>
           <input
@@ -35,7 +38,10 @@ const Contacto = () => {
           />
         </div>
         <div className="sm:col-span-2">
-          <label for="message" className="block mb-4 text-base text-gray-300 ">
+          <label
+            htmlFor="message"
+            className="block mb-4 text-base text-gray-300 "
+          >
             Mensaje
           </label>
           <textarea
