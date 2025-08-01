@@ -1,10 +1,13 @@
 import Logo from "../assets/Logo.png";
 import { Icon } from "@iconify/react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="flex justify-between items-center gap-5 p-4">
-      <img src={Logo} alt="Logo" className="w-3xs" />
+    <footer className="flex justify-between items-center gap-5 p-4 h-[120px]">
+      <Link to={"/"}>
+        <img src={Logo} alt="Logo" className="w-3xs" />
+      </Link>
       <div>
         <p className="text-xl">Av. Alvarez Thomas 2617</p>
         <p className="text-xl text-center">CABA</p>

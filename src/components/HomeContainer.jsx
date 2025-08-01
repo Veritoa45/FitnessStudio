@@ -9,7 +9,6 @@ const HomeContainer = () => {
     <>
       <h1 className="hidden">Fitness Studio</h1>
       <img src={Entrena} alt="Entrenamiento" className="w-full" />
-      <div>Reserva tu lugar</div>
       <div className="container p-4 mx-auto">
         <ClasesListContainer />
         <TestimonioContainer />

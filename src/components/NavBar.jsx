@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Icon } from "@iconify/react";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,6 +45,12 @@ const NavBar = () => {
           <a href="#galeria" className="text-lg hover:bg-gray-800 p-2 rounded">
             Galeria
           </a>
+          <Link
+            to={"/mis-reservas"}
+            className="text-lg hover:bg-gray-800 p-2 rounded"
+          >
+            Mis Reservas
+          </Link>
           <a href="#contacto" className="text-lg hover:bg-gray-800 p-2 rounded">
             Contacto
           </a>
