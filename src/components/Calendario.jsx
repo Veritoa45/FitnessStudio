@@ -1,16 +1,37 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { ClasesContext } from "../context/ClasesContext";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../services/firebase";
 
 const Calendario = ({ detail }) => {
-  const { setClaseSeleccionada, setHorarioSeleccionado } =
-    useContext(ClasesContext);
+  const {
+    clase: { claseSeleccionada, setClaseSeleccionada },
+    horario: { horarioSeleccionado, setHorarioSeleccionado },
+    fecha: { fechaSeleccionada, setFechaSeleccionada },
+  } = useContext(ClasesContext);
   const navigate = useNavigate();
 
-  const handleClick = (horario) => {
+  const handleClick = async (horario) => {
     setClaseSeleccionada(detail);
     setHorarioSeleccionado(horario);
-    navigate("/form-reserva");
+
+    try {
+      const horariosRef = collection(db, `clases/${detail.id}/horarios`);
+      const snapshot = await getDocs(horariosRef);
+
+      const fechasFiltradas = snapshot.docs
+        .map((doc) => doc.id)
+        .filter((fechaStr) => {
+          const [fecha, hora] = fechaStr.split("_");
+          return hora === horario.hora;
+        });
+
+      setFechaSeleccionada({ dia: fechasFiltradas });
+      navigate("/form-reserva");
+    } catch (error) {
+      console.error("Error al obtener fechas:", error);
+    }
   };
 
   console.log(detail);

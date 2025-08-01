@@ -3,7 +3,9 @@ import { useContext } from "react";
 import { ClasesContext } from "../context/ClasesContext";
 
 const CardClase = ({ clase }) => {
-  const { setClaseSeleccionada } = useContext(ClasesContext);
+  const {
+    clase: { setClaseSeleccionada },
+  } = useContext(ClasesContext);
   const navigate = useNavigate();
 
   const handleClick = () => {
