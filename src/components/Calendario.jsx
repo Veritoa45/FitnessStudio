@@ -8,7 +8,6 @@ const Calendario = ({ detail }) => {
 
   const handleClick = async (horario) => {
     setHorarioSeleccionado(horario);
-    console.log("Horario seleccionado:", horario);
     navigate("/form-reserva");
   };
 
