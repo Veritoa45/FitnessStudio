@@ -2,7 +2,26 @@
   {
     "id": "01",
     "nombre": "Aerobics",
-    "imagen": "src/assets/aerobics.jpg"
+    "imagen": "src/assets/aerobics.jpg",
+    "horariosDisponibles": [
+      {
+        "dia": "Lunes",
+        "hora": "08:00"
+      },
+      {
+        "dia": "Martes",
+        "hora": "10:00"
+      }
+    ],
+    "horarios": [
+      {
+        "id": "2025-08-25_08:00",
+        "dia": "25-08-2025",
+        "hora": "08:00",
+        "disponibilidad": 20,
+        "reservas": 0
+      }
+    ]
   },
   {
     "id": "02",

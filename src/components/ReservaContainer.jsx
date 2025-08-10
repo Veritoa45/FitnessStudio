@@ -3,16 +3,17 @@ import { ClasesContext } from "../context/ClasesContext";
 import FormReserva from "./FormReserva";
 
 const ReservaContainer = () => {
-  const {
-    clase: { claseSeleccionada },
-    horario: { horarioSeleccionado },
-    fecha: { fechaSeleccionada },
-  } = useContext(ClasesContext);
+  const { claseSeleccionada, horarioSeleccionado, fechaSeleccionada } =
+    useContext(ClasesContext);
 
   return (
     <div>
       <h2>Completá el formulario para reservar</h2>
-      <FormReserva />
+      <FormReserva
+        clase={claseSeleccionada}
+        horario={horarioSeleccionado}
+        fecha={fechaSeleccionada}
+      />
     </div>
   );
 };

@@ -2,34 +2,45 @@ import { useContext } from "react";
 import { ClasesContext } from "../context/ClasesContext";
 
 const FormReserva = () => {
-  const {
-    clase: { claseSeleccionada },
-    horario: { horarioSeleccionado },
-    fecha: { fechaSeleccionada },
-  } = useContext(ClasesContext);
+  const { claseSeleccionada, horarioSeleccionado } = useContext(ClasesContext);
+  console.log(claseSeleccionada);
+  const fechasDisponibles =
+    claseSeleccionada?.horarios && horarioSeleccionado?.hora
+      ? claseSeleccionada.horarios.filter(
+          (h) => h.hora === horarioSeleccionado.hora
+        )
+      : [];
+
+  console.log("Fechas disponibles:", fechasDisponibles);
 
   return (
     <form>
-      <label htmlFor="">Clase:</label>
+      <label>Clase:</label>
       <p>{claseSeleccionada?.nombre}</p>
-      <label htmlFor="">Día:</label>
+      <label>Día:</label>
       <p>{horarioSeleccionado?.dia}</p>
-      <label htmlFor="">Hora:</label>
+      <label>Hora:</label>
       <p>{horarioSeleccionado?.hora}</p>
-      <label htmlFor="">Fechas disponibles:</label>
-      <select name="" id="">
-        {fechaSeleccionada?.dia?.map((fecha, index) => (
-          <option key={index} value={fecha}>
-            {fecha}
-          </option>
-        ))}
+      <label>Fechas disponibles:</label>
+      <select name="fecha" required>
+        {fechasDisponibles.length > 0 ? (
+          fechasDisponibles.map((fecha) => (
+            <option key={fecha.id} value={fecha.dia}>
+              {fecha.dia}
+            </option>
+          ))
+        ) : (
+          <option value="">No hay fechas disponibles</option>
+        )}
       </select>
-      <label htmlFor="">Nombre:</label>
+      <label>Nombre:</label>
       <input type="text" name="nombre" required />
-      <label htmlFor="">Apellido:</label>
+      <label>Apellido:</label>
       <input type="text" name="apellido" required />
-      <label htmlFor="">Email:</label>
+      <label>Email:</label>
       <input type="email" name="email" required />
+      <label>Teléfono:</label>
+      <input type="number" name="telefono" required />
       <button type="submit">Reservar</button>
     </form>
   );

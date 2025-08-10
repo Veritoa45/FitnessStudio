@@ -1,15 +1,23 @@
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { ClasesContext } from "../context/ClasesContext";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../services/firebase";
 
 const CardClase = ({ clase }) => {
-  const {
-    clase: { setClaseSeleccionada },
-  } = useContext(ClasesContext);
+  const { setClaseSeleccionada } = useContext(ClasesContext);
   const navigate = useNavigate();
 
-  const handleClick = () => {
-    setClaseSeleccionada(clase);
+  const handleClick = async () => {
+    const horariosRef = collection(db, "clases", clase.id, "horarios");
+    const horariosSnap = await getDocs(horariosRef);
+    const horarios = horariosSnap.docs.map((doc) => ({
+      id: doc.id,
+      ...doc.data(),
+    }));
+
+    // Guardar la clase seleccionada con los horarios
+    setClaseSeleccionada({ ...clase, horarios });
     navigate(`/reserva/${clase.nombre}`);
   };
 

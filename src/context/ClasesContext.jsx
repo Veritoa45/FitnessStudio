@@ -6,30 +6,22 @@ export const ClasesProvider = ({ children }) => {
   const [claseSeleccionada, setClaseSeleccionada] = useState(null);
   const [horarioSeleccionado, setHorarioSeleccionado] = useState(null);
   const [fechaSeleccionada, setFechaSeleccionada] = useState(null);
-  const [cantidadMaxima, setCantidadMaxima] = useState(null);
-  const [cantidadReservas, setCantidadReservas] = useState(null);
+
+  // Derivar cantidadMaxima y cantidadReservas del horario seleccionado
+  const cantidadMaxima = horarioSeleccionado?.disponibilidad ?? null;
+  const cantidadReservas = horarioSeleccionado?.reservas ?? null;
 
   return (
     <ClasesContext.Provider
       value={{
-        clase: {
-          claseSeleccionada,
-          setClaseSeleccionada,
-        },
-        horario: {
-          horarioSeleccionado,
-          setHorarioSeleccionado,
-        },
-        fecha: {
-          fechaSeleccionada,
-          setFechaSeleccionada,
-        },
-        cantidad: {
-          cantidadMaxima,
-          setCantidadMaxima,
-          cantidadReservas,
-          setCantidadReservas,
-        },
+        claseSeleccionada,
+        setClaseSeleccionada,
+        horarioSeleccionado,
+        setHorarioSeleccionado,
+        fechaSeleccionada,
+        setFechaSeleccionada,
+        cantidadMaxima,
+        cantidadReservas,
       }}
     >
       {children}

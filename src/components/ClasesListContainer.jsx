@@ -1,37 +1,10 @@
-import { useEffect, useState } from "react";
 import ClasesList from "./ClasesList";
 import LineaCorta from "./LineaCorta";
 import Loader from "./Loader";
-import { collection, getDocs } from "firebase/firestore";
-import { db } from "../services/firebase";
-//import clases from "../mock/clases.json";
+import { useClases } from "../hooks/useClases";
 
 const ClasesContainer = () => {
-  const [loading, setLoading] = useState(false);
-  const [datos, setDatos] = useState([]);
-
-  useEffect(() => {
-    const getDatos = async () => {
-      setLoading(true);
-
-      try {
-        const coleccionRef = collection(db, "clases");
-        const res = await getDocs(coleccionRef);
-        const listaClases = res.docs.map((doc) => ({
-          id: doc.id,
-          ...doc.data(),
-        }));
-
-        setDatos(listaClases);
-      } catch (error) {
-        console.error("Error fetching clases:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    getDatos();
-  }, []);
+  const { datos, loading } = useClases();
 
   return (
     <section id="clases">
