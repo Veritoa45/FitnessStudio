@@ -17,7 +17,7 @@ const GaleriaGrid = () => {
   ];
 
   return (
-    <>
+    <section id="galeria" className="mt-[60px] mb-[60px]">
       <LineaCorta />
       <h2 className="text-center text-2xl italic">Galería</h2>
       <LineaCorta />
@@ -31,7 +31,7 @@ const GaleriaGrid = () => {
           />
         ))}
       </div>
-    </>
+    </section>
   );
 };
 

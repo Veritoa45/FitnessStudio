@@ -2,7 +2,7 @@ import LineaCorta from "./LineaCorta";
 
 const Contacto = () => {
   return (
-    <section className="mt-[60px]">
+    <section id="contacto" className="mt-[60px]">
       <LineaCorta />
       <h2 className="text-center text-2xl italic">Contactanos</h2>
       <LineaCorta />

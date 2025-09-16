@@ -16,7 +16,6 @@ const CardClase = ({ clase }) => {
       ...doc.data(),
     }));
 
-    // Guardar la clase seleccionada con los horarios
     setClaseSeleccionada({ ...clase, horarios });
     navigate(`/reserva/${clase.nombre}`);
   };

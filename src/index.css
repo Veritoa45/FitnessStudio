@@ -3,6 +3,7 @@
 body {
   background-color: #111827;
   color: #f1f5f9;
+  scroll-behavior: smooth;
 }
 
 .tag-color {
@@ -21,4 +22,12 @@ body {
   opacity: 0.8;
   padding: 20px;
   transform: translate(0%, -50%);
+}
+
+section[id] {
+  scroll-margin-top: 140px;
+}
+
+.with-fixed-header {
+  padding-top: 120px;
 }
